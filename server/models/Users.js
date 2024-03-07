@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema(
             required:true,
             trim:true,
         },
+        contactNumber:{
+            type:Number,
+            required:true,
+        },
         password:{
             type:String,
             required:true,
@@ -26,13 +30,15 @@ const userSchema = new mongoose.Schema(
             enum:["Admin","Student"],
             required:true,
         },
-        course:{
+        sem:{
             type:String,
             required:true,
         },
+        approver:{
+            type:String,
+        },
         image:{
             type:String,
-            required:true,
         }
     }
 )
